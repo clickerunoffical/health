@@ -1,0 +1,36 @@
+<% let sodiumClass = 'neutral'; %>
+<% let proteinClass = 'neutral';%>
+<% let carbsClass = 'neutral'; %>
+
+<% if (parseInt(food.protein) > 20) { %>
+  <% proteinClass='good'; %>
+<% } %>
+<% if (parseInt(food.sodium) > 1100) { %>
+  <% sodiumClass='warn'; %>
+<% } %>
+<% if (parseInt(food.carbohydrates) > 100) { %>
+  <% carbsClass='warn'; %>
+<% } else if (parseInt(food.carbohydrates) < 20) { %>
+  <% carbsClass='good'; %>
+<% } %>
+
+<div class='foodsub first'>
+  <img src="<%= food.imageURL %>">
+  <h2 class='foodname'>
+    <%= food.name %>
+  </h2>
+</div>
+<div class='foodsub second'>
+  <h3><label>Added on</label><%= moment(food.createdAt).tz('America/New_York').format("dddd, hA") %> </h3>
+</div>
+<div class='foodsub third'>
+  <span class='<%= proteinClass %>'><i class='fa fa-circle'></i> Protein <span class='tooltip'><%= food.protein %>g</span></span>
+  <span class='<%= sodiumClass %>'><i class='fa fa-circle'></i> Sodium <span class='tooltip'><%= food.sodium %>mg</span></span>
+  <span class='<%= carbsClass %>'><i class='fa fa-circle'></i> Carbs <span class='tooltip'><%= food.carbohydrates %>g</span></span>
+</div>
+<% if (!food.updated) { %>
+<div class='foodsub fourth'>
+  <button class='archive'>Archive</button>
+  <button class='delete'>Delete</button>
+</div>
+<% } %>

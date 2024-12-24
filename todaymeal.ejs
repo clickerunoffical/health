@@ -1,0 +1,53 @@
+<% let sodiumClass = 'neutral'; %>
+<% let proteinClass = 'neutral';%>
+<% let carbsClass = 'neutral'; %>
+<% let fiberClass = 'neutral'; %>
+
+<% if (parseInt(meal.totalProtein) > 20) { %>
+  <% proteinClass='good'; %>
+<% } %>
+<% if (parseInt(meal.totalSodium) > 1000) { %>
+  <% sodiumClass='warn'; %>
+<% } %>
+<% if (parseInt(meal.totalFiber) > 10) { %>
+  <% fiberClass='good'; %>
+  <% } %>
+<% if (parseInt(meal.totalCarbs) > 110) { %>
+  <% carbsClass='warn'; %>
+<% } else if (parseInt(meal.totalCarbs) < 67) { %>
+  <% carbsClass='good'; %>
+<% } %>
+
+
+<li data-id='<%= meal.id %>'>
+  <div class='info'>
+    <div class='metadata'>
+      <h3><%= meal.whichMeal %></h3>
+      <span class='time'><%= moment(meal.createdAt).tz('America/New_York').format('hA') %> <%= ( moment(meal.createdAt).tz('America/New_York').format('D') == moment().tz('America/New_York').format('D') ) ? 'today' : moment(meal.createdAt).tz('America/New_York').format('ddd') %></span>
+      <a class='iconclick' href='<%=`/meals/${meal.id}`%>'><i class='fa fa-pencil'></i></a>
+      <form class='single' action='<%= `/meals/delete/${meal.id}?_method=DELETE`%>' method='POST'>
+        <button type='submit'><i class='fa fa-trash'></i></button>
+      </form>
+    </div>
+    <p class='ingredients'><%= meal.ingredients %></p>
+    <p class='comments'><%= meal.comments %></p>
+  </div>
+  <div class='nutrients'>
+    <div class='sodium'>
+      <label>Sodium</label>
+      <span class='<%= sodiumClass%>' ><%= meal.totalSodium %>mg</span>
+    </div>
+    <div class='protein'>
+      <label>Protein</label>
+      <span class='<%= proteinClass%>' ><%= meal.totalProtein %>g</span>
+    </div>
+    <div class='carbs'>
+      <label>Carbs</label>
+      <span class='<%= carbsClass%>' ><%= meal.totalCarbs %>g</span>
+    </div>
+    <div class='fiber'>
+      <label>Fiber</label>
+      <span class='<%= fiberClass%>' ><%= meal.totalFiber %>g</span>
+    </div>
+  </div>
+</li>

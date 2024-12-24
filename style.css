@@ -1,0 +1,586 @@
+/* Variables */
+/* ============= Body */
+body {
+  font-family: "brandon-grotesque", helvetica, sans-serif; }
+
+.container {
+  padding-top: 50px;
+  max-width: 90vw;
+  margin: 0 auto; }
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: 80vw; } }
+
+.wrapper {
+  min-height: 90vh; }
+
+footer {
+  background-color: #EBE8E1;
+  color: #222;
+  text-align: center;
+  line-height: 1.5em;
+  padding: 50px 15vw;
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 800px) {
+    footer {
+      flex-direction: row; } }
+  footer .footercol {
+    flex: 1; }
+  footer a {
+    text-decoration: none; }
+  footer .bgr {
+    font-size: 1.3em; }
+
+/*=============== edit & delete buttons */
+.iconclick {
+  cursor: pointer;
+  color: #ccc;
+  transition: 0.2s all; }
+  .iconclick:hover {
+    color: #32B67A;
+    transition: 0.2s all; }
+
+.single {
+  display: inline-block; }
+  .single button {
+    cursor: pointer;
+    color: #ccc;
+    transition: 0.2s all; }
+    .single button:hover {
+      color: #F03F35;
+      transition: 0.2s all; }
+
+.base-button, .full input[type=submit], .todaysmeals ul .addnew, .foods .btn, .archives .btn {
+  font-size: 1.8em;
+  margin: 20px;
+  padding: 5px 40px;
+  background-color: #0E38B1;
+  color: #EBE8E1;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s all; }
+  .base-button:hover, .full input[type=submit]:hover, .todaysmeals ul .addnew:hover, .foods .btn:hover, .archives .btn:hover {
+    background-color: #32B67A;
+    transition: 0.3s all; }
+
+/* ====================== FORM */
+.full {
+  width: 50vw;
+  border: 1px solid #eee;
+  padding: 50px;
+  margin: 0 auto;
+  text-align: center; }
+  .full input[type=text], .full input[type=password], .full textarea {
+    border-bottom: 3px solid #32B67A;
+    font-size: 1.5em;
+    display: block;
+    margin: 20px 0;
+    padding: 5px;
+    font-family: "alternate-gothic-no-2-d", impact, sans-serif;
+    width: 100%;
+    transition: 0.2s all; }
+    .full input[type=text]:focus, .full input[type=password]:focus, .full textarea:focus {
+      border-color: #F0CF61;
+      transition: 0.2s all;
+      outline: 0; }
+  .full label {
+    color: #ccc;
+    font-size: 0.8em;
+    text-transform: uppercase; }
+  .full .fields {
+    display: flex;
+    text-align: left; }
+    .full .fields div {
+      margin: 15px;
+      flex: 1;
+      flex-direction: column;
+      display: flex; }
+  .full select {
+    font-size: 1.5em;
+    font-family: "alternate-gothic-no-2-d", impact, sans-serif;
+    flex: 1;
+    padding: 0 25px; }
+    .full select option {
+      font-size: 1rem;
+      font-family: "alternate-gothic-no-2-d", impact, sans-serif; }
+
+/* ================= NAVIGATION */
+nav {
+  display: flex;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: #32B67A;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  border-bottom: 1px solid #278e5f; }
+  @media screen and (max-width: 800px) {
+    nav {
+      flex-direction: column;
+      align-items: center; } }
+  @media screen and (min-width: 800px) {
+    nav ul li {
+      display: inline-block;
+      font-size: 20px; } }
+  nav ul li a {
+    color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+    transition: 0.2s all;
+    border-radius: 10px; }
+    nav ul li a:hover {
+      background-color: #0E38B1;
+      transition: 0.2s all; }
+    nav ul li a i {
+      color: #F0CF61; }
+  nav .logo {
+    display: flex;
+    align-items: center; }
+    nav .logo a {
+      color: white;
+      font-size: 30px;
+      text-decoration: none;
+      margin: auto 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px; }
+    nav .logo img {
+      max-height: 80px; }
+
+/* ========================= HOME */
+@media screen and (min-width: 800px) {
+  .home nav {
+    position: fixed; } }
+
+.home .container {
+  min-height: 100vh;
+  padding: 0 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; }
+  @media screen and (max-width: 800px) {
+    .home .container {
+      min-height: 70vh; } }
+  .home .container h1 {
+    color: white;
+    font-size: 4em;
+    font-family: "leitura-news", georgia, sans-serif; }
+  .home .container .hm {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 60px;
+    margin: 50px 15px;
+    font-size: 2em;
+    border-radius: 30px;
+    background-color: rgba(50, 182, 122, 0.8);
+    transition: 0.2s all;
+    color: white;
+    cursor: pointer; }
+    .home .container .hm:hover {
+      background-color: #0E38B1;
+      transition: 0.2s all; }
+
+.home .wrapper {
+  background-image: url("../images/1762.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+/* =================== LOGIN */
+.welcmsg {
+  text-align: center;
+  margin: 20px 0 70px 0; }
+  .welcmsg h1 {
+    font-family: "leitura-news", georgia, sans-serif;
+    font-size: 3em; }
+
+/* ===================== DASHBOARD */
+.user {
+  background-color: #f9f8f6; }
+
+.top {
+  display: flex;
+  align-items: center; }
+  .top h1 {
+    font-size: 3em;
+    font-family: "leitura-news", georgia, sans-serif;
+    margin-right: 30px; }
+  .top .btn {
+    text-decoration: none;
+    margin: 0 10px;
+    color: white;
+    background-color: #F03F35;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 1.2rem; }
+
+.dash-container, .todaysmeals, .tbbr, .nutritiontrack, .archives {
+  background-color: white;
+  margin: 20px 15px;
+  padding: 50px;
+  border-radius: 5px; }
+
+/* ============ TODAYS MEALS ============ */
+.todaysmeals .mealstop {
+  display: flex;
+  align-items: center; }
+
+.todaysmeals .btn {
+  display: block;
+  text-decoration: none;
+  margin: 0 10px;
+  color: white;
+  background-color: #0E38B1;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 1.2rem; }
+
+.todaysmeals h4 {
+  font-family: "alternate-gothic-no-2-d", impact, sans-serif;
+  font-size: 2em; }
+  .todaysmeals h4 img {
+    max-height: 3rem;
+    vertical-align: middle; }
+
+.todaysmeals ul {
+  display: flex;
+  margin: 15px 0;
+  flex-wrap: wrap;
+  user-select: none; }
+  @media screen and (max-width: 800px) {
+    .todaysmeals ul {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      max-height: 300px;
+      overflow-y: auto;
+      border: 1px solid #eee;
+      padding: 15px; } }
+  .todaysmeals ul .addnew {
+    text-decoration: none;
+    background-color: #eee;
+    color: #32B67A;
+    display: block;
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+    padding: 20px 10px; }
+    .todaysmeals ul .addnew:hover {
+      color: white; }
+  .todaysmeals ul li {
+    border: 1px solid #ddd;
+    margin: 5px;
+    flex: 1; }
+    @media screen and (max-width: 800px) {
+      .todaysmeals ul li {
+        display: block; } }
+    @media screen and (min-width: 800px) {
+      .todaysmeals ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; } }
+    @media screen and (min-width: 1090px) {
+      .todaysmeals ul li {
+        max-width: 32%; } }
+    .todaysmeals ul li .info {
+      padding: 20px; }
+    .todaysmeals ul li h3 {
+      font-family: "leitura-news", georgia, sans-serif;
+      font-size: 1.3em;
+      margin-bottom: 15px;
+      text-transform: capitalize; }
+    .todaysmeals ul li p {
+      padding: 10px 0; }
+    .todaysmeals ul li .ingredients {
+      color: #aaa;
+      font-size: 0.9rem; }
+    .todaysmeals ul li .comments {
+      font-size: 1.1rem; }
+    .todaysmeals ul li .nutrients {
+      display: flex; }
+      @media screen and (min-width: 800px) {
+        .todaysmeals ul li .nutrients {
+          height: 40px; } }
+      @media screen and (max-width: 500px) {
+        .todaysmeals ul li .nutrients {
+          flex-direction: column; } }
+      .todaysmeals ul li .nutrients div {
+        flex: 1;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5px;
+        border-top: 1px solid #eee; }
+        @media screen and (max-width: 500px) {
+          .todaysmeals ul li .nutrients div {
+            justify-content: center; } }
+        .todaysmeals ul li .nutrients div label {
+          font-size: 0.5rem;
+          text-transform: uppercase;
+          color: #aaa; }
+          @media screen and (max-width: 500px) {
+            .todaysmeals ul li .nutrients div label {
+              margin-right: 5px; } }
+    .todaysmeals ul li .time {
+      background-color: #0E38B1;
+      font-family: "brandon-grotesque", helvetica, sans-serif;
+      letter-spacing: 1px;
+      color: white;
+      font-size: 0.8rem;
+      display: inline-block;
+      vertical-align: top;
+      text-transform: uppercase;
+      padding: 3px 5px;
+      border-radius: 10px;
+      margin: 0 3px; }
+
+/* ============= SET UP FOR TABS ============= */
+.tabntr {
+  display: flex; }
+  @media screen and (max-width: 1200px) {
+    .tabntr {
+      flex-direction: column; } }
+
+.tbbr {
+  flex: 3; }
+
+.tab-nav {
+  margin: 0 0 15px 0; }
+  .tab-nav ul {
+    display: flex; }
+    .tab-nav ul li {
+      flex: 1;
+      text-align: center;
+      padding: 0 0 15px;
+      border-bottom: 3px solid #ddd;
+      cursor: pointer;
+      font-family: "alternate-gothic-no-2-d", impact, sans-serif;
+      font-size: 2em; }
+      .tab-nav ul li img {
+        max-height: 1.5em;
+        vertical-align: middle;
+        margin: 0 10px; }
+    .tab-nav ul li.actv {
+      border-bottom: 3px solid #32B67A; }
+
+#tabcontent, #nutabcontent {
+  max-height: 500px;
+  min-height: 500px;
+  overflow-x: auto; }
+  #tabcontent .tabcont, #tabcontent .nucontent, #nutabcontent .tabcont, #nutabcontent .nucontent {
+    display: none; }
+  #tabcontent .actv, #nutabcontent .actv {
+    display: block; }
+
+/* ================== FOODSLIST STYLING ================ */
+.btn-addmeal {
+  display: block;
+  margin: 10px auto;
+  width: 50%;
+  padding: 5px 10px;
+  text-align: center;
+  color: #32B67A;
+  background-color: #eee;
+  text-decoration: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.2s all; }
+  .btn-addmeal:hover {
+    background-color: #32B67A;
+    color: white;
+    transition: 0.2s all; }
+
+.foods, .archives {
+  user-select: none; }
+  .foods .btn, .archives .btn {
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin: 10px auto 20px;
+    text-decoration: none;
+    padding: 10px; }
+  .foods ul, .archives ul {
+    font-size: 0.8em; }
+    .foods ul li, .archives ul li {
+      display: flex;
+      margin: 5px;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      border-right: 1px solid #eee; }
+      @media screen and (max-width: 800px) {
+        .foods ul li, .archives ul li {
+          flex-direction: column; } }
+      .foods ul li .foodsub, .archives ul li .foodsub {
+        border-left: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        padding: 0 10px; }
+        .foods ul li .foodsub img, .archives ul li .foodsub img {
+          height: 75px;
+          width: 85px;
+          margin-left: -10px; }
+        .foods ul li .foodsub label, .archives ul li .foodsub label {
+          display: block;
+          font-size: 0.8em;
+          color: #ccc;
+          text-transform: uppercase;
+          margin: 5px; }
+        .foods ul li .foodsub h2, .archives ul li .foodsub h2 {
+          font-size: 1.3em;
+          margin: 0 0 0 10px;
+          text-transform: capitalize;
+          font-family: "leitura-news", georgia, sans-serif; }
+
+.first {
+  flex: 4; }
+
+.second, .third {
+  flex: 2; }
+
+.fourth {
+  flex: 1; }
+
+.fourth, .third {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start !important; }
+
+.third .warn, .third .good, .third .neutral {
+  cursor: pointer;
+  margin: 2px 0;
+  position: relative;
+  /* ========= TOOLTIPS */ }
+  .third .warn .tooltip, .third .good .tooltip, .third .neutral .tooltip {
+    display: none;
+    min-width: 60px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: -25%;
+    left: 20%;
+    margin-left: 60px;
+    opacity: 0;
+    transition: opacity 1s; }
+    .third .warn .tooltip:after, .third .good .tooltip:after, .third .neutral .tooltip:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent #555 transparent transparent; }
+  .third .warn:hover .tooltip, .third .good:hover .tooltip, .third .neutral:hover .tooltip {
+    display: block;
+    opacity: 1; }
+
+#archive {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; }
+  #archive img {
+    display: none; }
+  @media screen and (min-width: 1000px) {
+    #archive {
+      flex-direction: row; } }
+  @media screen and (min-width: 800px) {
+    #archive li {
+      min-width: 48%; } }
+  #archive .fourth {
+    display: none; }
+
+/* ============ NUTRITION TRACKER STYLING =========== */
+.nutritiontrack {
+  flex: 1; }
+
+#data-bar {
+  width: 225px;
+  height: 300px; }
+
+.nutritionintro {
+  font-size: 1.1em;
+  color: #ccc;
+  font-style: italic;
+  line-height: 1.3em;
+  margin-bottom: 20px; }
+
+/* ======= ARCHIVE STYLING === */
+.archives .title {
+  flex: 1;
+  text-align: center;
+  padding: 0 0 15px;
+  border-bottom: 3px solid #ddd;
+  font-family: "alternate-gothic-no-2-d", impact, sans-serif;
+  font-size: 2em;
+  margin-bottom: 15px; }
+  .archives .title img {
+    max-height: 1.5em;
+    vertical-align: middle;
+    margin: 0 10px; }
+
+.meals ul {
+  display: flex;
+  flex-wrap: wrap; }
+
+.meals li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #eee;
+  padding: 10px;
+  margin: 10px; }
+  .meals li .metadata {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px; }
+    .meals li .metadata h3 {
+      font-family: "leitura-news", georgia, sans-serif;
+      text-transform: capitalize;
+      font-size: 1.2rem; }
+    .meals li .metadata .iconclick {
+      display: none; }
+    .meals li .metadata .time {
+      color: white;
+      background-color: #0E38B1;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      padding: 3px 5px;
+      border-radius: 10px;
+      margin: 0 3px;
+      text-transform: uppercase; }
+  .meals li .nutrients {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    padding: 8px 0 0 0;
+    border-top: 1px solid #eee;
+    margin-top: 8px; }
+  .meals li .ingredients {
+    margin-bottom: 8px;
+    color: #ccc;
+    font-size: 0.8rem; }
+
+/*==== WARN GOOD NEUTRAL ===== */
+.warn {
+  color: #F03F35;
+  border-bottom: 1px dotted #F03F35; }
+
+.good {
+  color: #32B67A;
+  border-bottom: 1px dotted #32B67A; }
+
+.neutral {
+  color: #F0CF61;
+  border-bottom: 1px dotted #F0CF61; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+<div class='container'>
+  <div class='welcmsg'>
+    <h1>Thank you for returning to Healthify.</h1>
+  </div>
+  <form class='full' action='/auth/login' method='post'>
+    <div class='fields'>
+      <div>
+        <label>Username:</label>
+        <input type='text' name='username' />
+      </div>
+      <div>
+        <label>Password:</label>
+        <input type='password' name='password' />
+      </div>
+    </div>
+      <input type='submit' value='Log In'>
+  </form>
+
+ <!-- <a href="/auth/facebook">Login with Facebook</a> -->
+
+
+<!--   <div
+    class="fb-login-button"
+    data-max-rows="1" data-size="large"
+    data-show-faces="false"
+    data-auto-logout-link="true"
+    onlogin="checkLoginState();"
+    logout="checkLoginState();">
+  </div> -->
+
+</div>
+<% include ../partials/footer %>
